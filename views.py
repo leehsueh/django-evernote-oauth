@@ -21,8 +21,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 # NOTE: You must change the consumer key and consumer secret to the 
 #       key and secret that you received from Evernote
 #
-consumerKey = "YOUR CONSUMER KEY"
-consumerSecret = "YOUR CONSUMER SECRET"
+consumerKey = "leehsueh"
+consumerSecret = "1ca94529bdb70d97"
 
 evernoteHost = "sandbox.evernote.com"   # change this to use production env when ready
 tempCredentialRequestUri = "https://" + evernoteHost + "/oauth"
