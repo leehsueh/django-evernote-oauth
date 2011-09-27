@@ -1,6 +1,4 @@
 import sys
-import hashlib
-import binascii
 import time
 import thrift.protocol.TBinaryProtocol as TBinaryProtocol
 import thrift.transport.THttpClient as THttpClient
@@ -17,16 +15,16 @@ import urlparse
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from django.core.urlresolvers import reverse
-from django.http import HttpResponse, HttpResponseRedirect, Http404
+from django.http import HttpResponse, HttpResponseRedirect
 
 #
 # NOTE: You must change the consumer key and consumer secret to the 
 #       key and secret that you received from Evernote
 #
-consumerKey = "leehsueh"
-consumerSecret = "1ca94529bdb70d97"
+consumerKey = "YOUR CONSUMER KEY"
+consumerSecret = "YOUR CONSUMER SECRET"
 
-evernoteHost = "sandbox.evernote.com"
+evernoteHost = "sandbox.evernote.com"   # change this to use production env when ready
 tempCredentialRequestUri = "https://" + evernoteHost + "/oauth"
 resOwnerAuthUri = "https://" + evernoteHost + "/OAuth.action"
 resEmbeddedParam = "?format=microclip"
@@ -120,7 +118,6 @@ def oauth_test_callback(request):
             c = {
                 'notebooks': notebooks,
                 'username': user.username,
-                'auth_token': auth_token,
                 'edam_userId': edam_userId,
                 'notes': notes,
             }
