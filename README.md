@@ -17,7 +17,8 @@ Setup
 Usage Example
 -------------
 
-NOTE: Integration may not be the most elegant, but for now it works
+NOTE: Integration may not be the most elegant, but for now it works.
+
 * In your views file, import from the evernote_oauth views the following as needed:
 	- view functions and utility functions
 		- parse_oauth_credentials
