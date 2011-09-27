@@ -1,17 +1,23 @@
 Dependencies
+============
+
 * Evernote Python API SDK (download from http://www.evernote.com/about/developer/api/)
 * Django sessions framework configured and enabled in settings.py
 
 Setup
+-----
+
 * make sure the evernote/thrift python libraries are added to your python installation's site-packages directory
 * place the evernote_oauth dir either in your django project or somewhere accessible on your python path (if placing inside your project dir, you'll need to reference it by prefixing your project's name in import statements)
 * in your settings.py file, add evernote_oauth as an installed app
-* in your project's top level url.py file, add a url pattern line to include evernote_oauth.urls, specifying a namespace and app name
-	* Example: (r'^evernote/oauth/', include('evernote_oauth.urls', namespace='evernote_oauth', app_name='evernote_oauth'))
+* in your project's top level url.py file, add a url pattern line to include evernote_oauth.urls, specifying a namespace and app name. Example:
+	(r'^evernote/oauth/', include('evernote_oauth.urls', namespace='evernote_oauth', app_name='evernote_oauth'))
 * open evernote_oauth/views.py and change the consumerKey and consumerSecret to the values you received from Evernote when requesting an API key
 
 Usage Example
-* NOTE: Integration may not be the most elegant, but for now it works
+-------------
+
+NOTE: Integration may not be the most elegant, but for now it works
 * In your views file, import from the evernote_oauth views the following as needed:
 	- view functions and utility functions
 		- parse_oauth_credentials
