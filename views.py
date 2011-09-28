@@ -24,7 +24,8 @@ from django.http import HttpResponse, HttpResponseRedirect
 consumerKey = "leehsueh"
 consumerSecret = "1ca94529bdb70d97"
 
-evernoteHost = "sandbox.evernote.com"   # change this to use production env when ready
+# evernoteHost = "sandbox.evernote.com"   # change this to use production env when ready
+evernoteHost = "evernote.com"
 tempCredentialRequestUri = "https://" + evernoteHost + "/oauth"
 resOwnerAuthUri = "https://" + evernoteHost + "/OAuth.action"
 resEmbeddedParam = "?format=microclip"
