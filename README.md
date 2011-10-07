@@ -9,10 +9,11 @@ Setup
 
 * make sure the evernote/thrift python libraries are added to your python installation's site-packages directory
 * place the evernote_oauth dir either in your django project or somewhere accessible on your python path (if placing inside your project dir, you'll need to reference it by prefixing your project's name in import statements)
-* in your settings.py file, add evernote_oauth as an installed app
+* in your settings.py file
+	* add evernote_oauth as an installed app
+	* add EVERNOTE_CONSUMER_KEY and EVERNOTE_CONSUMER_SECRET variables and set them to the values you received from Evernote when requesting an API key
 * in your project's top level url.py file, add a url pattern line to include evernote_oauth.urls, specifying a namespace and app name. Example:
 	(r'^evernote/oauth/', include('evernote_oauth.urls', namespace='evernote_oauth', app_name='evernote_oauth'))
-* open evernote_oauth/views.py and change the consumerKey and consumerSecret to the values you received from Evernote when requesting an API key
 
 Usage Instructions
 ------------------

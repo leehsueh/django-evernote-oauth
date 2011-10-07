@@ -17,12 +17,8 @@ from django.template import RequestContext
 from django.core.urlresolvers import reverse
 from django.http import HttpResponse, HttpResponseRedirect
 
-#
-# NOTE: You must change the consumer key and consumer secret to the 
-#       key and secret that you received from Evernote
-#
-consumerKey = "leehsueh"
-consumerSecret = "1ca94529bdb70d97"
+from siteapps_v1.settings import EVERNOTE_CONSUMER_KEY as consumerKey
+from siteapps_v1.settings import EVERNOTE_CONSUMER_SECRET as consumerSecret
 
 # evernoteHost = "sandbox.evernote.com"   # change this to use production env when ready
 evernoteHost = "evernote.com"
