@@ -21,7 +21,7 @@ from siteapps_v1.settings import EVERNOTE_CONSUMER_KEY as consumerKey
 from siteapps_v1.settings import EVERNOTE_CONSUMER_SECRET as consumerSecret
 
 # evernoteHost = "sandbox.evernote.com"   # change this to use production env when ready
-evernoteHost = "evernote.com"
+evernoteHost = "www.evernote.com"
 tempCredentialRequestUri = "https://" + evernoteHost + "/oauth"
 resOwnerAuthUri = "https://" + evernoteHost + "/OAuth.action"
 resEmbeddedParam = "?format=microclip"
